@@ -7,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.post("/", async (req, res, next) => {
+app.post("/createNewFile", async (req, res, next) => {
   try {
     const folderName = "log";
     const folderPath = path.join(__dirname, folderName);
@@ -27,7 +27,7 @@ app.post("/", async (req, res, next) => {
   }
 });
 
-app.get("/", (req, res, next) => {
+app.get("/getallfile", (req, res, next) => {
   try {
     const folderName = "log";
     // Get the absolute path of the specific folder relative to the current script's location
